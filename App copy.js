@@ -2,6 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
+import PresentationalComponent from './PresentationalComponent';
+
 // export default function App() {
 //   return (
 //     <View style={styles.container}>
@@ -31,9 +33,11 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.redBox}></View>
-        <View style={styles.blueBox}></View>
-        <View style={styles.blackBox}></View>
+        <PresentationalComponent
+          updateState={this.updateState}
+          name={this.state.name}
+          place={this.state.place}
+        ></PresentationalComponent>
       </View>
     );
   }
@@ -41,25 +45,9 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    alignItems: 'flex-end',
-    backgroundColor: 'grey',
-    height: 600,
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-  redBox: {
-    height: 100,
-    width: 100,
-    backgroundColor: 'red'
-  },
-  blueBox: {
-    height: 100,
-    width: 100,
-    backgroundColor: 'blue'
-  },
-  blackBox: {
-    height: 100,
-    width: 100,
-    backgroundColor: 'black'
-  }
 });
