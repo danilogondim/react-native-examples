@@ -1,0 +1,16 @@
+
+Mounting
+  constructor()
+  render()
+  componentDidMount()
+  getDerivedStateFromProps()
+
+Update
+  getDerivedStateFromProps()
+  shouldComponentUpdate()
+  render()
+  getSnapshotBeforeUpdate()
+  componentDidUpdate()
+
+Unmounting
+  componentWillUnmount()
