@@ -1,15 +1,15 @@
 
 Mounting
-  constructor()
-  render()
-  componentDidMount()
-  getDerivedStateFromProps()
+  constructor() -- runs once when mounting the component only
+  render() -- what include component in the DOM
+  componentDidMount() -- triggered just after the render method finishes
+  getDerivedStateFromProps() -- called just before rendering the element in the DOM to set state according to the props
 
-Update
+Update --> when state or props is changed
   getDerivedStateFromProps()
-  shouldComponentUpdate()
+  shouldComponentUpdate() -- decide if component should update. Default = true
   render()
-  getSnapshotBeforeUpdate()
+  getSnapshotBeforeUpdate() -- get a value before update. When using this, we also need componentDidMount
   componentDidUpdate()
 
 Unmounting
