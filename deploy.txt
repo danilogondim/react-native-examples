@@ -1,0 +1,21 @@
+both:
+name
+description
+screenshots
+app version
+bundleId
+icon
+
+app store:
+  icons 1024px
+  keywords
+  countries
+  category
+  copyrights
+  demo account
+  .ipa file
+
+google play:
+  icon
+  app category
+  .apk file

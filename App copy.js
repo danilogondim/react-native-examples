@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import GeolocationExample from './GeolocationExample';
+import HomeScreen from './HomeScreen';
+import FriendsScreen from './FriendsScreen';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
@@ -14,7 +16,12 @@ class App extends React.Component {
   render() {
     return (
       <>
-        {/* <GeolocationExample></GeolocationExample> */}
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={HomeScreen}></Stack.Screen>
+            <Stack.Screen name="Friends" component={FriendsScreen}></Stack.Screen>
+          </Stack.Navigator>
+        </NavigationContainer>
       </>
     )
   }
